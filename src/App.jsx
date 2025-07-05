@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Room from "./pages/Room/Room";
 import Streaming from "./pages/Room/Streaming";
-
 function App() {
   return (
     <>
@@ -14,5 +13,4 @@ function App() {
     </>
   );
 }
-
 export default App;
