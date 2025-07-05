@@ -34,15 +34,18 @@ body {
   font-size: 1.2rem;
   color: #ddd;
 }
-.btn{
+.btn {
   display: inline-block;
-  padding:0.75rem 2rem;
+  padding: 0.75rem 2rem;
   background: #00f0ff;
-  color:#000;
+  color: #000;
   border-radius: 30px;
   text-decoration: none;
-  font-weight:600;
-  transition: b;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #00cfd4;
 }
 .image-container {
   max-width: 600px;
@@ -53,4 +56,79 @@ body {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(0, 225, 225, 0);
+}
+
+/* ////Animation  */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+.delay-1 {
+  animation-delay: 1s;
+}
+
+/* ======================= */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.form-container input[type="text"] {
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 1rem;
+  color: #0f2027;
+  margin-bottom: 20px;
+}
+
+.form-group button {
+  width: 100px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px 0px 20px;
+  cursor: pointer;
+  background-color: #0f2027;
+  color: #ddd;
+  font-weight: bold;
+}
+
+.form-group button:hover {
+  background-color: #fff;
+  color: #0f2027;
 }
